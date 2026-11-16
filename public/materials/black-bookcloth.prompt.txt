@@ -1,0 +1,14 @@
+Tool: OpenAI built-in image generation
+Generated: 2026-10-01
+Use case: product-mockup
+Asset type: seamless UI surface texture for a matte-black private ledger binding
+Primary request: create a restrained, edge-to-edge close-up material patch combining the fine cross-grain of black Morocco-style calfskin with sober machine-grained archival bookcloth; this is a background texture, not a product photograph
+Scene/backdrop: the entire frame is the material surface, flat and front-facing
+Style/medium: highly realistic macro material photography with extremely subtle tactile grain
+Composition/framing: orthographic flat crop, even texture density across every edge, no object, no horizon, no folds
+Lighting/mood: broad diffuse neutral studio illumination, nearly flat, only enough micro-shadow to reveal grain; quiet, private, archival
+Color palette: near-black #0b0b0a with only 2-4% tonal variation
+Materials/textures: fine tight cross-hatch and bookcloth fibre, small scale, refined and durable, no large pores
+Constraints: no text, no logo, no mark, no stitching, no seams, no border, no vignette, no glare, no highlights, no gradient wash, no pattern bands, no objects, no hand, no watermark; the result must tile unobtrusively when used with background-size cover
+Avoid: glossy leather, crocodile/alligator grain, pebbled upholstery, fashion-luxury staging, gold, beige, brown, dramatic shadows, high contrast, visible repetition
+

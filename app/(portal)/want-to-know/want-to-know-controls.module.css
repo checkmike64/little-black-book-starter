@@ -1,0 +1,388 @@
+.actionRail {
+  align-items: stretch;
+  display: grid;
+  gap: 7px;
+  grid-template-columns: auto;
+  justify-self: end;
+  max-width: none;
+  position: relative;
+  width: auto;
+}
+
+.actionRail .disclosureButton {
+  height: 44px;
+  justify-self: end;
+  min-width: 44px;
+  padding: 0 13px;
+}
+
+.actionRail > .panel {
+  justify-self: end;
+  max-height: none;
+  position: static;
+}
+
+.visuallyHidden {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.recordLink,
+.disclosureButton,
+.accentButton {
+  align-items: center;
+  background: linear-gradient(180deg, #fbfcfa 0%, #eff2f1 100%);
+  border: 1px solid var(--strong-rule, #aeb9bc);
+  border-radius: 2px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 94%),
+    inset 0 -1px 2px rgb(39 52 56 / 8%),
+    0 1px 2px rgb(28 38 41 / 6%);
+  color: var(--ink, #171a1c);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  gap: 8px;
+  height: 36px;
+  justify-content: center;
+  letter-spacing: 0.01em;
+  padding: 0 12px;
+  text-decoration: none;
+  transition:
+    background-color 160ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 160ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 100ms ease,
+    color 160ms ease,
+    transform 100ms ease;
+}
+
+.accentButton {
+  background: linear-gradient(180deg, #0872e8 0%, #075dce 100%);
+  border-color: #064daa;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 25%),
+    inset 0 -1px 1px rgb(1 35 77 / 32%),
+    0 2px 5px rgb(7 67 139 / 18%);
+  color: #fff;
+}
+
+.recordLink {
+  justify-content: flex-start;
+  padding-inline: 13px;
+}
+
+.recordLink:hover,
+.disclosureButton:hover {
+  background: #f8faf8;
+  border-color: #8f9da1;
+  color: #0b4f9e;
+}
+
+.accentButton:hover {
+  background: linear-gradient(180deg, #117bec 0%, #075dce 100%);
+  border-color: #043f8d;
+}
+
+.recordLink:active,
+.disclosureButton:active,
+.disclosureButton[data-open="true"],
+.accentButton:active,
+.accentButton[data-open="true"] {
+  background: #e4eaeb;
+  border-color: #9ca9ac;
+  box-shadow:
+    inset 0 2px 4px rgb(31 45 49 / 16%),
+    inset 0 -1px 0 rgb(255 255 255 / 70%);
+  color: #083f7e;
+  transform: translateY(1px);
+}
+
+.accentButton:active,
+.accentButton[data-open="true"] {
+  background: #064fae;
+  color: #fff;
+}
+
+.recordLink:focus-visible,
+.disclosureButton:focus-visible,
+.accentButton:focus-visible,
+.planLink:focus-visible {
+  outline: 2px solid var(--accent, #075dce);
+  outline-offset: 3px;
+}
+
+.workspaceDisclosure {
+  position: relative;
+}
+
+.workspaceDisclosure > button {
+  min-height: 40px;
+}
+
+.workspacePanel {
+  min-width: min(440px, calc(100vw - 48px));
+  top: calc(100% + 10px);
+}
+
+.glyph,
+.recordGlyph,
+.directionGlyph {
+  fill: none;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.25;
+}
+
+.glyph { height: 16px; width: 16px; }
+.recordGlyph { color: var(--accent, #075dce); height: 17px; width: 17px; }
+.directionGlyph { height: 18px; width: 18px; }
+
+.glyph circle {
+  fill: currentColor;
+  stroke: none;
+}
+
+.panel {
+  animation: reveal-panel 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--paper, #f8f9f7);
+  border: 1px solid var(--strong-rule, #aeb9bc);
+  box-shadow: 0 18px 42px rgb(12 18 20 / 13%);
+  display: grid;
+  gap: 13px;
+  grid-column: 1 / -1;
+  max-height: min(640px, calc(100vh - 72px));
+  min-width: min(380px, calc(100vw - 48px));
+  overflow: auto;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 9px);
+  width: min(420px, calc(100vw - 48px));
+  z-index: 20;
+}
+
+.panel > form,
+.panel > div:not(.registrationLine) {
+  display: grid;
+  gap: 13px;
+  margin: 0;
+}
+
+.panel button[type="submit"] {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.registrationLine {
+  background: var(--accent, #075dce);
+  height: 2px;
+  left: 20px;
+  position: absolute;
+  top: -1px;
+  width: 34px;
+}
+
+.planNavigator {
+  border-bottom: 1px solid var(--strong-rule, #aeb9bc);
+  border-top: 1px solid var(--strong-rule, #aeb9bc);
+}
+
+.planList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.planItem + .planItem {
+  border-top: 1px solid var(--hair, #c9d1d3);
+}
+
+.planLink {
+  align-items: center;
+  color: var(--ink, #171a1c);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(190px, 0.8fr) minmax(240px, 1.2fr) 64px 18px;
+  min-height: 78px;
+  padding: 14px 12px 14px 18px;
+  position: relative;
+  text-decoration: none;
+  transition:
+    background-color 160ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 160ms ease;
+}
+
+.planLink::before {
+  background: transparent;
+  content: "";
+  inset: 0 auto 0 0;
+  position: absolute;
+  width: 2px;
+}
+
+.planLink:hover {
+  background: rgb(255 255 255 / 36%);
+}
+
+.planLink[data-active="true"] {
+  background: linear-gradient(90deg, rgb(7 93 206 / 8%), transparent 58%);
+}
+
+.planLink[data-active="true"]::before {
+  background: var(--accent, #075dce);
+}
+
+.planIdentity {
+  display: grid;
+  gap: 4px;
+}
+
+.planIdentity strong {
+  font-family: var(--font-fraunces), Baskerville, Georgia, serif;
+  font-size: 1.04rem;
+  font-weight: 500;
+}
+
+.planIdentity > span,
+.planSignal {
+  color: var(--ink-soft, #4f595c);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.planCount {
+  display: grid;
+  justify-items: end;
+}
+
+.planCount b {
+  color: var(--accent, #075dce);
+  font-family: var(--font-fraunces), Baskerville, Georgia, serif;
+  font-size: 1.48rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.planCount span {
+  color: var(--muted, #5f696c);
+  font-family: var(--font-ledger-utility), "Arial Narrow", sans-serif;
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.planLink .directionGlyph {
+  color: var(--muted, #5f696c);
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.planLink:hover .directionGlyph {
+  color: var(--accent, #075dce);
+  transform: translateX(2px);
+}
+
+@keyframes reveal-panel {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+  .actionRail {
+    grid-template-columns: auto;
+    max-width: none;
+  }
+
+  .recordLink,
+  .disclosureButton,
+  .accentButton {
+    height: 44px;
+  }
+
+  .panel {
+    animation-name: reveal-panel-inline;
+    box-shadow: none;
+    max-height: none;
+    min-width: 0;
+    position: static;
+    width: auto;
+  }
+
+  .workspacePanel {
+    bottom: 20px;
+    left: 20px;
+    max-height: calc(100dvh - 40px);
+    min-width: 0;
+    position: fixed;
+    right: 20px;
+    top: auto;
+    width: auto;
+    z-index: 40;
+  }
+
+  .planLink {
+    gap: 8px 18px;
+    grid-template-columns: minmax(0, 1fr) 56px 18px;
+    padding-block: 16px;
+  }
+
+  .planSignal {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .planCount {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .planLink > .directionGlyph {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .actionRail {
+    grid-template-columns: auto;
+  }
+
+  .recordLink {
+    justify-content: center;
+  }
+
+  .panel {
+    grid-column: 1 / -1;
+    padding: 18px 16px;
+  }
+
+  .registrationLine { left: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel { animation: none; }
+  .recordLink,
+  .disclosureButton,
+  .accentButton,
+  .planLink,
+  .planLink .directionGlyph { transition-duration: 0.01ms; }
+  .recordLink:active,
+  .disclosureButton:active,
+  .disclosureButton[data-open="true"],
+  .planLink:hover .directionGlyph { transform: none; }
+}
+
+@keyframes reveal-panel-inline {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

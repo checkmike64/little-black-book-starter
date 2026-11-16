@@ -1,0 +1,43 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "incremental": false,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rewriteRelativeImportExtensions": true,
+    "baseUrl": ".",
+    "noEmit": false,
+    "outDir": ".test-build",
+    "rootDir": ".",
+    "tsBuildInfoFile": ".test-build/tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "runtime/owner-route-policy.js",
+    "runtime/promise-routes.js",
+    "lib/activity-rows.ts",
+    "lib/operator-access-policy.ts",
+    "lib/return-path.ts",
+    "lib/field-provenance.ts",
+    "lib/relationship-action-validation.ts",
+    "lib/relationship-action-dedupe.ts",
+    "lib/ask-confidence.ts",
+    "lib/ops-risk.ts",
+    "lib/client-launch-readiness.ts",
+    "lib/client-install-manifest.ts",
+    "lib/contact-fields.ts",
+    "lib/data-quality.ts",
+    "lib/quality-cleanup-proposal.ts",
+    "lib/change-card-presentation.ts",
+    "lib/change-review-groups.ts",
+    "lib/pending-change-inspection.ts",
+    "lib/pending-change-risk.ts",
+    "lib/pending-change-review.ts",
+    "lib/pending-change-types.ts",
+    "lib/review-queue-observation.ts",
+    "lib/env.ts",
+    "lib/introduction-draft-state.ts",
+    "lib/data-load-health.ts",
+    "tests/**/*.test.ts"
+  ]
+}

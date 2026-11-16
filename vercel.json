@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/automation/daily",
+      "schedule": "0 11 * * *"
+    },
+    {
+      "path": "/api/automation/recordings",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/automation/enrichment",
+      "schedule": "*/10 * * * *"
+    }
+  ]
+}

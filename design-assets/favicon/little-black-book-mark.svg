@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title">
+  <title id="title">Little Black Book</title>
+  <path fill="#0b0b0a" stroke="#829397" stroke-width=".75" d="M5 2h20.25A2.75 2.75 0 0 1 28 4.75V28H7.75A3.75 3.75 0 0 1 4 24.25V3a1 1 0 0 1 1-1Z"/>
+  <path fill="#f7fbfa" d="M8 24h20v4H8a2 2 0 1 1 0-4Z"/>
+  <path fill="#829397" d="M8 24h20v1H8a1 1 0 0 0 0 2h20v1H8a2 2 0 1 1 0-4Z"/>
+  <path fill="#292a26" d="M8 2h2v22H8z"/>
+  <path fill="#0b56c7" d="M22 2h3v8l-1.5-1.2L22 10V2Z"/>
+</svg>
